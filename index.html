@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <title>Shark Simulator</title>
+    <style>
+
+      * {
+      font-family: 'Futura';
+      }
+      input, p, h4 {
+      margin: 0;
+      padding: 0;
+      }
+      .menu {
+      position: absolute;
+      }
+
+      .btn-primary {
+      background: #e7e7e7;
+      border: none;
+      color: #333;
+      }
+      .info-options {
+      background: #fff;
+      padding: 20px;
+      border-radius: 0 25px 25px 0;
+      }
+      .slider-label {
+      color: #115898;
+      margin-top: 30px;
+      }
+      .slider-one {
+      margin-top: 10px;
+      }
+      #exterminate {
+      margin-top: 30px;
+      }
+      .btn-danger {
+      margin-left: 10px;
+      }
+      #attract {
+      color: #888;
+      }
+      #info {
+      width: 300px;
+      }
+      #least {
+      float: left;
+      }
+      #most {
+      float: right;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="menu">
+      <div class="btn btn-primary">Toggle Info & Settings Menu</div>
+      <div class="info-options">
+        <div id="info">
+          <h4><i class="fa fa-mouse-pointer" aria-hidden="true"></i> Click anywhere in the ecosystem to add a fish there</h4>
+          <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1471975848/fishDiagram_cvx9wr.png" />
+          <p id="attract">'Attractive' fish have a quadrupled chance of reproducing at any given moment</p>
+        </div>
+        <p class="slider-label slider-one">Amount of Prey (Orange Fish):</p>
+        <input id="food-chance" type="range" min="0" max="0.1" step="0.01" value="0.03"/>
+        <p><span id="least">famine</span><span id="most">feast</span></p>
+
+        <p class="slider-label">DNA Mutation Rate:</p>
+        <input id="mutation" type="range" min="0" max="1" step="0.01" value="0.05"/>
+        <p><span id="least">0%</span><span id="most">100%</span></p>
+
+          <p class="slider-label">Number of Predators:</p>
+        <input id="sharks" type="range" min="0" max="3" step="1" value="2"/>
+        <p><span id="least">0</span><span id="most">3</span></p>
+        <div id="exterminate">
+          <span>Feeling Evil?</span><button class="btn btn-danger">Exterminate</button></div>
+      </div>
+    </div>
+
+
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.22/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/addons/p5.dom.min.js"></script>
+    <script language="javascript" type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  </body>
+</html>
